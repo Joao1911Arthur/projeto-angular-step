@@ -1,17 +1,17 @@
+
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'exemplo',
+  selector: 'app-exemplo',
   imports: [],
   templateUrl: './exemplo.html',
   styleUrl: './exemplo.css',
 })
 export class Exemplo {
-
-  nome = "Joao";
+  nome = "Fabio";
 
   mudarNome() {
-    this.nome = "Brabo";
+    this.nome = "Angular Dev";
   }
-
 }
+          
