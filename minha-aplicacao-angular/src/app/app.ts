@@ -1,11 +1,10 @@
 
 import { Component, signal } from '@angular/core';
-import { Aula2 } from './aula2/aula2';
-import { PainelAdm } from './painel-adm/painel-adm';
+import { Aula3 } from './aula3/aula3';
 
 @Component({
   selector: 'app-root',
-  imports: [Aula2, PainelAdm],
+  imports: [Aula3],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
