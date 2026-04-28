@@ -1,6 +1,7 @@
 <ul>
     @for (user of users; track user.id) {
-    <li>{{ user.nome }}</li>
+    <li>{{ user.nome | titlecase  }}</li>
+    <li>{{ user.salario | currency:'BRL' }}</li>
     }@empty {
     <li>lsita vazia</li>
   }
