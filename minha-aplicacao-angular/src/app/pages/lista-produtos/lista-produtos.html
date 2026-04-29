@@ -1,10 +1,17 @@
+
 <h1>Lista de Produtos</h1>
 
-<ul>
-  <li>
-    <a [routerLink]="['/produto', 10]">Ver detalhes</a>
-  </li>
-  <li>
-    <a [routerLink]="['/painel-adm']">Painel ADM</a>
-  </li>
-</ul>
+@if (carregando()) {
+  <p>Carregando produtos...</p>
+} @else {
+  <ul>
+    @for (produto of produtos(); track produto.id) {
+      <li>
+        {{ produto.title }} -
+        <a [routerLink]="['/produto', produto.id]">Ver detalhes</a>
+      </li>
+    }
+  </ul>
+}
+
+          
