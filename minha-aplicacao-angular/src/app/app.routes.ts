@@ -22,8 +22,8 @@ export const routes: Routes = [
       ),
   },
   {
-    path: '**',
-    redirectTo: 'produtos', 
+    path: "painel-adm",
+    loadComponent: () => import('./painel-adm/painel-adm').then(m => m.PainelAdm)
   }
 ];
           

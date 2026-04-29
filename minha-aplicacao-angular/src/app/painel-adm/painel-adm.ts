@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
 
 interface Pessoas {
   nome: string;
@@ -7,7 +9,7 @@ interface Pessoas {
 
 @Component({
   selector: 'app-painel-adm',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './painel-adm.html',
   styleUrls: ['./painel-adm.css'],
 })
@@ -20,4 +22,5 @@ export class PainelAdm {
     { nome: 'Ana', id: 4 },
     { nome: 'Carlos', id: 5 },
   ];
+
 }

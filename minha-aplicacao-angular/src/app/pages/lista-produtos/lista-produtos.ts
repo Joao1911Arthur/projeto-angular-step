@@ -2,6 +2,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+
 @Component({
   selector: 'app-lista-produtos',
   standalone: true,
@@ -11,5 +12,6 @@ import { RouterModule } from '@angular/router';
 })
 export class ListaProdutos {
   produtos = [];
+
 }
           
