@@ -1,5 +1,6 @@
 
 import { Routes } from '@angular/router';
+import { authGuard } from './aula6/guards/auth-guard';
 
 export const routes: Routes = [
   {
@@ -22,8 +23,16 @@ export const routes: Routes = [
       ),
   },
   {
-    path: "painel-adm",
-    loadComponent: () => import('./dever/painel-adm/painel-adm').then(m => m.PainelAdm)
+    path: 'painel-adm',
+    loadComponent: () =>
+      import('./dever/painel-adm/painel-adm').then(
+        (m) => m.PainelAdm
+      ),
+    canActivate: [authGuard],
+  },
+  {
+    path: '**',
+    redirectTo: 'produtos',
   }
 ];
           
