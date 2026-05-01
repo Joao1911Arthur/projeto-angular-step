@@ -1,1 +1,8 @@
-<p>{{ usuarios()[0] }}</p>
+ <h1>Painel Administrativo</h1>
+
+ @for(user of usuarios(); track user.id){
+    <ul>
+        <li>{{user.name.firstname}}</li>
+        <li>{{user.email}}</li>
+    </ul>
+ }
