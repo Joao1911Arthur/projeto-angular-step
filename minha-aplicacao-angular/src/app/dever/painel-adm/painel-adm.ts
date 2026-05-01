@@ -1,11 +1,15 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, JsonPipe } from '@angular/common';
 import { Usuario } from '../services/usuario';
 
 
 interface Pessoas {
-  nome: string;
   id: number;
+  email: string;
+  name: {
+    firstname: string;
+    lastname: string;
+  };
 }
 
 @Component({
@@ -17,13 +21,14 @@ interface Pessoas {
 
 export class PainelAdm implements OnInit {
 
-  usuarios : any = signal([]);
+  usuarios = signal<Pessoas[]>([]);
 
-  constructor(private usuarioService: Usuario) {}
+
+  constructor(private usuarioService: Usuario) { }
 
   ngOnInit(): void {
     this.usuarioService.listarUsuarios().subscribe({
-      next: (dados: Usuario[]) => {
+      next: (dados: Pessoas[]) => {
         this.usuarios.set(dados);
         console.log(this.usuarios());
       },
