@@ -37,10 +37,24 @@ export const routes: Routes = [
         (m) => m.ComponentePai
       ),
   },
-
   {
     path: 'produto-pai',
     loadComponent: () => import('./dever/produto-pai/produto-pai').then((m) => m.ProdutoPai),
+  },
+
+  {
+    path: 'cadastro-usuario',
+    loadComponent: () =>
+      import('./aula8/pages/cadastro-usuario/cadastro-usuario').then(
+        (m) => m.CadastroUsuario
+      ),
+  },
+  {
+    path: 'login-usuario',
+    loadComponent: () =>
+      import('./dever/login-usuario/login-usuario').then(
+        (m) => m.LoginUsuario
+      ),
   },
   {
     path: '**',
