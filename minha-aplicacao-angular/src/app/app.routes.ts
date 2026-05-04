@@ -31,8 +31,19 @@ export const routes: Routes = [
     canActivate: [authGuard],
   },
   {
+    path: 'componente-pai',
+    loadComponent: () =>
+      import('./aula7/pages/componente-pai/componente-pai').then(
+        (m) => m.ComponentePai
+      ),
+  },
+
+  {
+    path: 'produto-pai',
+    loadComponent: () => import('./dever/produto-pai/produto-pai').then((m) => m.ProdutoPai),
+  },
+  {
     path: '**',
     redirectTo: 'produtos',
   }
 ];
-          
