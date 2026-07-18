@@ -1,0 +1,38 @@
+
+div{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    justify-self: center;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+h1{
+    text-align: center;
+    margin: 20px;
+    font-size: 2.5em;
+}
+
+h2{
+    text-align: center;
+    margin: 20px;
+    font-size: 1.5em;
+}
+
+img{
+    width: 100px;
+    margin: auto;
+}
+
+.example-card {
+  width: 400px;
+  height: 500px;
+  margin: 10px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}

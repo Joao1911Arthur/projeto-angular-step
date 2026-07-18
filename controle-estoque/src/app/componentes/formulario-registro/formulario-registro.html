@@ -1,0 +1,25 @@
+<!-- app.component.html -->
+
+<h2>Faça um cadastro do seu funcionário</h2>
+
+<form [formGroup]="registroForm" (ngSubmit)="registrar()">
+  <input type="text" formControlName="nome" placeholder="Nome" />
+    <input type="email" formControlName="email" placeholder="E-mail" />
+    <input type="password" formControlName="password" placeholder="Senha" />
+    <select formControlName="cargo">
+      <option value="">Selecione uma função</option>
+      <option value="admin">Administrador</option>
+      <option value="operacional">Operacional</option>
+      <option value="gerente">Gerente</option>
+    </select>
+    <button type="submit">Registrar</button>
+
+    <p *ngIf="registroForm.get('email')?.invalid">
+      {{ errorMessage   }}
+    </p>
+
+    <p *ngIf="nextMessage">
+      {{ nextMessage }}
+    </p>
+
+</form>
