@@ -5,11 +5,11 @@ import { MatCardModule } from '@angular/material/card';
 
 interface Product {
   id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
+  nome: string;
+  preco: number;
+  descricao: string;
+  categoria: string;
+  imagem: string;
 }
 
 @Component({

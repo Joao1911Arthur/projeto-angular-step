@@ -23,7 +23,7 @@ export class Login {
 
   loginForm = new FormGroup({
     email: new FormControl('', Validators.required),
-    password: new FormControl('', Validators.required),
+    senha: new FormControl('', Validators.required),
   });
 
   verificarEmail() {
@@ -38,6 +38,7 @@ export class Login {
   login() {
     this.auth.login(this.loginForm.value).subscribe({
       next: (response: any) => {
+        console.log(response);
         localStorage.setItem('token', response.token);
         this.router.navigate(['/dashboard']);
       },

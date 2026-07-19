@@ -6,7 +6,7 @@
 
 <form [formGroup]="loginForm" (ngSubmit)="login()">
   <input type="email" formControlName="email" placeholder="E-mail" (blur)="verificarEmail()" />
-  <input type="password" formControlName="password" placeholder="Senha" />
+  <input type="password" formControlName="senha" placeholder="Senha" />
   <button type="submit">Entrar</button>
   <p *ngIf="errorMessage">{{ errorMessage }}</p>
 </form>

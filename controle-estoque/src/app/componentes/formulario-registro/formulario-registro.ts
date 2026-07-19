@@ -21,8 +21,8 @@ export class FormularioRegistro {
   registroForm = new FormGroup({
     nome: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', Validators.required),
-    cargo: new FormControl('', Validators.required),
+    senha: new FormControl('', Validators.required),
+    role: new FormControl('', Validators.required),
   });
 
   errorMessage: string | undefined;

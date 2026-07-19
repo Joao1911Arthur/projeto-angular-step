@@ -10,7 +10,7 @@ export const perfilAcessoGuard: CanActivateFn = (route, state) => {
 
   return authService.verificarUsuario(token).pipe(
     map((response: any) => {
-      const cargo = response.cargo;
+      const role = response.usuario.role;
 
       if (!token) {
         router.navigate(['/login']);
@@ -18,7 +18,7 @@ export const perfilAcessoGuard: CanActivateFn = (route, state) => {
         return false; 
       }
 
-      if (cargo === 'admin') {
+      if (role === 'admin') {
         return true; 
       } else {
         router.navigate(['/login']);

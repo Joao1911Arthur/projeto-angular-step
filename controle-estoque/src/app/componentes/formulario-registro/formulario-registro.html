@@ -5,8 +5,8 @@
 <form [formGroup]="registroForm" (ngSubmit)="registrar()">
   <input type="text" formControlName="nome" placeholder="Nome" />
     <input type="email" formControlName="email" placeholder="E-mail" />
-    <input type="password" formControlName="password" placeholder="Senha" />
-    <select formControlName="cargo">
+    <input type="password" formControlName="senha" placeholder="Senha" />
+    <select formControlName="role">
       <option value="">Selecione uma função</option>
       <option value="admin">Administrador</option>
       <option value="operacional">Operacional</option>
