@@ -1,7 +1,6 @@
 // auth.guard.ts
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
-import { Auth } from '../servicos/auth';
 
 @Injectable({ providedIn: 'root' })
 export class AuthGuard implements CanActivate {

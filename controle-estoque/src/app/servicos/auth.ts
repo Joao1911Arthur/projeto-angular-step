@@ -6,13 +6,13 @@ import { Injectable } from '@angular/core';
 })
 export class Auth {
   apiUrl: string = 'https://projeto-nodejs-step-joao-arthur.vercel.app';
-  
+
   constructor(private http: HttpClient) { }
 
   registrar(usuario: any) {
-    return this.http.post(`${this.apiUrl}/registrar`, usuario );
+    return this.http.post(`${this.apiUrl}/registrar`, usuario);
   }
-  
+
   login(usuario: any) {
     return this.http.post(`${this.apiUrl}/login`, usuario);
   }

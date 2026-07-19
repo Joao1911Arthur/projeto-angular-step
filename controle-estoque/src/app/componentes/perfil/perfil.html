@@ -1,0 +1,51 @@
+<div id="idivP">
+
+    <div id="idivId">
+
+        <h1>
+            {{ usuario?.usuario.id }}
+        </h1>
+    </div>
+
+    <div id="idivNeh">
+        <div class="idivCont">
+            <p>
+                NOME
+            </p>
+            <h3>
+                {{ usuario?.usuario.nome }}
+            </h3>
+        </div>
+        <div class="idivCont">
+            <p>
+                EMAIL
+            </p>
+            <h3>
+                {{ usuario?.usuario.email }}
+            </h3>
+
+        </div>
+        <div class="idivCont">
+            <p>
+                CARGO
+            </p>
+            <h3>
+                {{ usuario?.usuario.role }}
+            </h3>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="idivToken">
+            <p>
+                Token de acesso
+            </p>
+            <h3>
+                {{ token }}
+            </h3>
+            
+
+        </div>
+
+</div>

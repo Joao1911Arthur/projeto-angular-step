@@ -17,7 +17,7 @@ export class Nav implements OnInit {
     const token = localStorage.getItem('token');
     if (token) {
       this.auth.verificarUsuario(token).subscribe((usuario: any) => {
-        this.nomeUsuario = usuario.name;
+        this.nomeUsuario = usuario.nome;
       });
     }
   }
