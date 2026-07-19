@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProdutoService {
 
-apiUrl: string = 'https://fakestoreapi.com/products';
+apiUrl: string = 'https://projeto-nodejs-step-joao-arthur.vercel.app/produtos';
 
   constructor(private http: HttpClient) {}
 

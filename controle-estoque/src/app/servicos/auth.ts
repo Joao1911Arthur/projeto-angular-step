@@ -5,24 +5,20 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class Auth {
-  apiUrl: string = 'https://projeto-node-step-git-main-fabios-projects-d2648344.vercel.app/api/auth';
-  apiKey: string = 'Step@2025';
-  headers = new HttpHeaders({
-    'x-api-key': this.apiKey,
-  });
+  apiUrl: string = 'https://projeto-nodejs-step-joao-arthur.vercel.app';
+  
   constructor(private http: HttpClient) { }
 
   registrar(usuario: any) {
-    return this.http.post(`${this.apiUrl}/register`, usuario, { headers: this.headers });
+    return this.http.post(`${this.apiUrl}/register`, usuario );
   }
   
   login(usuario: any) {
-    return this.http.post(`${this.apiUrl}/login`, usuario, { headers: this.headers });
+    return this.http.post(`${this.apiUrl}/login`, usuario);
   }
 
   pegarPerfilAcesso(token: any) {
     const headerComToken = new HttpHeaders({
-      'x-api-key': this.apiKey,
       'Authorization': `Bearer ${token}`
     })
     return this.http.get(`${this.apiUrl}/perfil`, { headers: headerComToken });
@@ -30,7 +26,6 @@ export class Auth {
 
   verificarUsuario(token: any) {
     const headerComToken = new HttpHeaders({
-      'x-api-key': this.apiKey,
       'Authorization': `Bearer ${token}`
     })
     return this.http.get(`${this.apiUrl}/me`, { headers: headerComToken });
